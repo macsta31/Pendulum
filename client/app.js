@@ -4,6 +4,7 @@ loadButton = document.getElementById('loadButton')
 resetButton = document.getElementById('resetButton')
 info = document.getElementById('info')
 infoText = document.getElementById('text_info')
+infoTag = document.getElementById('infotag')
 
 startButton.addEventListener('click', startAnimate)
 
@@ -22,11 +23,16 @@ resetButton.addEventListener('click', () => {
 loadButton.addEventListener('click', load)
 
 info.addEventListener('mouseover', () => {
+    infoTag.style.display = 'none'
     infoText.style.display = 'block'
+    infoText.style.border = '1px solid black'
+    infoText.style.borderRadius = '5px'
+    infoText.style.padding = '10px';
 })
 
 info.addEventListener('mouseout', () => {
     infoText.style.display = 'none'
+    infoTag.style.display = 'block'
 })
 
 var c=document.getElementById("canvas");
@@ -183,21 +189,26 @@ async function startAnimate(e){
         method: 'POST'
     })
 
+    try{
+        const response = await fetch('http://localhost:5001')
+        data = await response.json()
+    
+        const response1 = await fetch('http://localhost:5002')
+        data1 = await response1.json()
+    
+        const response2 = await fetch('http://localhost:5003')
+        data2 = await response2.json()
+    
+        const response3 = await fetch('http://localhost:5004')
+        data3 = await response3.json()
+    
+        const response4 = await fetch('http://localhost:5005')
+        data4 = await response4.json()
+    }
+    catch(err){
 
-    const response = await fetch('http://localhost:5001')
-    data = await response.json()
+    }
 
-    const response1 = await fetch('http://localhost:5002')
-    data1 = await response1.json()
-
-    const response2 = await fetch('http://localhost:5003')
-    data2 = await response2.json()
-
-    const response3 = await fetch('http://localhost:5004')
-    data3 = await response3.json()
-
-    const response4 = await fetch('http://localhost:5005')
-    data4 = await response4.json()
 
     let x = data.x
     let y = data.y
@@ -254,21 +265,26 @@ async function startAnimate(e){
     }
 
     async function update(){
+        try{
+            const response = await fetch('http://localhost:5001')
+            data = await response.json()
+    
+            const response1 = await fetch('http://localhost:5002')
+            data1 = await response1.json()
+    
+            const response2 = await fetch('http://localhost:5003')
+            data2 = await response2.json()
+    
+            const response3 = await fetch('http://localhost:5004')
+            data3 = await response3.json()
+    
+            const response4 = await fetch('http://localhost:5005')
+            data4 = await response4.json()
+        }
+        catch(err){
 
-        const response = await fetch('http://localhost:5001')
-        data = await response.json()
+        }
 
-        const response1 = await fetch('http://localhost:5002')
-        data1 = await response1.json()
-
-        const response2 = await fetch('http://localhost:5003')
-        data2 = await response2.json()
-
-        const response3 = await fetch('http://localhost:5004')
-        data3 = await response3.json()
-
-        const response4 = await fetch('http://localhost:5005')
-        data4 = await response4.json()
 
 
         ang = data.ang
