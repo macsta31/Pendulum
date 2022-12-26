@@ -1,10 +1,9 @@
 const http = require('http');
-var request = require('request')
 var fs = require('fs')
 const path = require('path');
 
 // Ports that will be used to simulate the pendulums
-const ports = [5000, 5001, 5002, 5003, 5004];
+const ports = [5001, 5002, 5003, 5004, 5005];
 
 const host = 'localhost';
 

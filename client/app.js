@@ -42,19 +42,19 @@ async function load(e){
     startButton.disabled = false
 
 
-    const response = await fetch('http://localhost:5000')
+    const response = await fetch('http://localhost:5001')
     data = await response.json()
 
-    const response1 = await fetch('http://localhost:5001')
+    const response1 = await fetch('http://localhost:5002')
     data1 = await response1.json()
 
-    const response2 = await fetch('http://localhost:5002')
+    const response2 = await fetch('http://localhost:5003')
     data2 = await response2.json()
 
-    const response3 = await fetch('http://localhost:5003')
+    const response3 = await fetch('http://localhost:5004')
     data3 = await response3.json()
 
-    const response4 = await fetch('http://localhost:5004')
+    const response4 = await fetch('http://localhost:5005')
     data4 = await response4.json()
 
 
@@ -156,7 +156,7 @@ async function load(e){
         ctx.stroke()
 }
 
-ports = [5000, 5001, 5002, 5003, 5004]
+ports = [5001, 5002, 5003, 5004, 5005]
 
 
 // Method to start animation
@@ -166,37 +166,37 @@ async function startAnimate(e){
     pauseButton.disabled = false
     resetButton.disabled = true
     startButton.disabled = true
-    fetch(`http://localhost:5000/start`, {
-        method: 'POST'
-    })
     fetch(`http://localhost:5001/start`, {
         method: 'POST'
     })
-
     fetch(`http://localhost:5002/start`, {
         method: 'POST'
     })
+
     fetch(`http://localhost:5003/start`, {
         method: 'POST'
     })
     fetch(`http://localhost:5004/start`, {
         method: 'POST'
     })
+    fetch(`http://localhost:5005/start`, {
+        method: 'POST'
+    })
 
 
-    const response = await fetch('http://localhost:5000')
+    const response = await fetch('http://localhost:5001')
     data = await response.json()
 
-    const response1 = await fetch('http://localhost:5001')
+    const response1 = await fetch('http://localhost:5002')
     data1 = await response1.json()
 
-    const response2 = await fetch('http://localhost:5002')
+    const response2 = await fetch('http://localhost:5003')
     data2 = await response2.json()
 
-    const response3 = await fetch('http://localhost:5003')
+    const response3 = await fetch('http://localhost:5004')
     data3 = await response3.json()
 
-    const response4 = await fetch('http://localhost:5004')
+    const response4 = await fetch('http://localhost:5005')
     data4 = await response4.json()
 
     let x = data.x
@@ -255,19 +255,19 @@ async function startAnimate(e){
 
     async function update(){
 
-        const response = await fetch('http://localhost:5000')
+        const response = await fetch('http://localhost:5001')
         data = await response.json()
 
-        const response1 = await fetch('http://localhost:5001')
+        const response1 = await fetch('http://localhost:5002')
         data1 = await response1.json()
 
-        const response2 = await fetch('http://localhost:5002')
+        const response2 = await fetch('http://localhost:5003')
         data2 = await response2.json()
 
-        const response3 = await fetch('http://localhost:5003')
+        const response3 = await fetch('http://localhost:5004')
         data3 = await response3.json()
 
-        const response4 = await fetch('http://localhost:5004')
+        const response4 = await fetch('http://localhost:5005')
         data4 = await response4.json()
 
 
