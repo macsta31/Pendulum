@@ -265,7 +265,7 @@ async function startAnimate(e){
     }
 
     async function update(){
-        try{
+
             const response = await fetch('http://localhost:5001')
             data = await response.json()
     
@@ -280,10 +280,6 @@ async function startAnimate(e){
     
             const response4 = await fetch('http://localhost:5005')
             data4 = await response4.json()
-        }
-        catch(err){
-
-        }
 
 
 
