@@ -243,11 +243,13 @@ async function startAnimate(e){
     
 
     async function gameLoop(fps){
+
         update();
         draw();
         setTimeout(() => {
             animationId = window.requestAnimationFrame(gameLoop)
         }, 1000/fps)
+        
         
     }
 

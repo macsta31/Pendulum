@@ -68,9 +68,9 @@ ports.forEach(function(port) {
           }
           /* Update method calculates new angle and position of pendulum given time elapsed */
           function update(){
-            console.log('updating')
+            // console.log('updating')
             ang = initAng * Math.cos((Math.sqrt(g / len) * t));
-            console.log(port, ang)
+            // console.log(port, ang)
 
             x = len * Math.sin(ang);
             y = len * Math.cos(ang);
@@ -125,7 +125,7 @@ ports.forEach(function(port) {
             buffer = JSON.parse(buffer)
             // console.log(buffer[port])
             resData = buffer
-            console.log(resData)
+            // console.log(resData)
             fs.writeFileSync(`pendulum_${port}.json`, JSON.stringify(resData), function(err) {
                 if (err) {
                     console.log(err)
